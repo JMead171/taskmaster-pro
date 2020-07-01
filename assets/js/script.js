@@ -212,20 +212,19 @@ $(".card .list-group").sortable({
         text: text,
         date: date
       });
-    });
-  
-  // trim down list's ID to match object property
-  var arrName = $(this)
+    });  
+    // trim down list's ID to match object property
+    var arrName = $(this)
     .attr("id")
     .replace("list-", "");
-
-  // update array on tasks object and save
-  tasks[arrName] = tempArr;
-  saveTasks();
-
-  console.log(tempArr);
-  }
+  
+    // update array on tasks object and save
+    tasks[arrName] = tempArr;
+    saveTasks();
+    } 
 });
+
+
 
 $("#trash").droppable({
   accept: ".card .list-group-item",
